@@ -8,9 +8,9 @@ from database import (create_tables, add_transaction,
 
 # Setup
 create_tables()
-st.title("💰 Personal Finance Tracker")
+st.title(" Personal Finance Tracker")
 
-# --- ADD TRANSACTION SECTION ---
+
 st.header("Add New Transaction")
 
 col1, col2 = st.columns(2)
@@ -35,8 +35,8 @@ if st.button("Add Transaction"):
     else:
         st.error("Please fill in all fields.")
 
-# --- SUMMARY SECTION ---
-st.header("📊 Summary")
+
+st.header("Summary")
 
 col3, col4, col5 = st.columns(3)
 
@@ -51,8 +51,8 @@ with col4:
 with col5:
     st.metric("Balance", f"{balance:.2f} MDL")
 
-# --- CHART SECTION ---
-st.header("📈 Spending by Category")
+
+st.header("Spending by Category")
 
 category_data = get_spending_by_category()
 
@@ -67,8 +67,8 @@ if category_data:
 else:
     st.info("No expense data yet.")
 
-# --- TRANSACTIONS TABLE ---
-st.header("📋 All Transactions")
+
+st.header("All Transactions")
 
 rows = get_all_transactions()
 
