@@ -6,7 +6,6 @@ from database import (create_tables, add_transaction,
                       get_all_transactions, get_total_by_type,
                       get_spending_by_category)
 
-# Setup
 create_tables()
 st.title(" Personal Finance Tracker")
 
